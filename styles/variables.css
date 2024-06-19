@@ -3,4 +3,9 @@
   --main-color: #000;
   --background-color: #fff;
   --overlay-color: rgba(0, 0, 0, 0.75);
+
+  --font-family-main: "Inter-Variable";
+  --font-family-accent: "PressStart2P";
+  --font-weight-main: 400;
+  --font-weight-accent: 700;
 }
