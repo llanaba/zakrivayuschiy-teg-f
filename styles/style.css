@@ -24,4 +24,60 @@
   background-attachment: fixed;
   font-family: var(--font-family-main), sans-serif;
   font-variation-settings: "wght" var(--font-weight-main);
+  padding-block-start: 100px;
+}
+
+.page__section {
+  inline-size: var(--container-inline-size);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  background-color: var(--background-color);
+  border: 2px solid var(--main-color);
+  padding-block-start: var(--padding-header-top);
+  font-family: var(--font-family-accent);
+  text-transform: uppercase;
+  padding-bottom: 25px;
+}
+
+.header__logo {
+  display: block;
+  font-size: var(--font-size-logo);
+  margin-block-end: 20px;
+}
+
+.header__title {
+  font-size: var(--font-size-title);
+  margin-block-end: 25px;
+}
+
+.header__theme-menu {
+  margin: 0 auto;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  font-size: 14px;
+  text-align: left;
+  padding-inline-start: 20px;
+}
+
+.theme-menu__button {
+  position: relative;
+  background-color: var(--background-color);
+  border: none;
+  text-transform: uppercase;
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  top: 0;
+  left: -16px;
 }

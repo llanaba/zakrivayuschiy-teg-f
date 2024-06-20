@@ -31,4 +31,23 @@
   --font-family-accent: "PressStart2P";
   --font-weight-main: 400;
   --font-weight-accent: 700;
+  --font-size-logo: clamp(3.0625rem, 2.7091rem + 1.5038vw, 4.0625rem);
+  --font-size-title: clamp(0.875rem, 0.6762rem + 0.8459vw, 1.4375rem);
+
+  /* Отступы и размеры элементов */
+  --container-inline-size: clamp(
+    375px,
+    100%,
+    700px
+  ); /* ширина хедера и карточек */
+  --padding-header-top: clamp(
+    120px,
+    calc(var(--container-inline-size) * 0.2),
+    136px
+  );
 }
+
+/* @media (width <= 375px) {
+  :root {
+  }
+} */
