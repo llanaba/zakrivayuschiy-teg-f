@@ -180,20 +180,31 @@
 .footer {
   margin-block-start: 50px;
   margin-block-end: 100px;
+  margin-block-end: 500px;
   display: flex;
   justify-content: center;
 }
 
-.button {
+.button_save {
   background-color: var(--background-color);
   border: 2px solid var(--main-color);
   padding: 19px 20px;
   display: flex;
   align-items: center;
-  max-width: 335px;
+  /* max-width: 335px; */
+  inline-size: 48%;
   gap: 4px;
   font-family: var(--font-family-accent);
   font-size: 14px;
+}
+
+@media (width <= 700px) {
+  .button_save {
+    flex-direction: column;
+    padding: 15px 20px;
+    min-inline-size: 306px;
+    gap: 8px;
+  }
 }
 
 .button__icon {
@@ -202,7 +213,6 @@
 }
 
 .button__text {
-  /* display: block; */
   white-space: nowrap;
 }
 
