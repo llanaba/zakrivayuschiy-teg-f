@@ -6,6 +6,7 @@
   --gradient-color-line: #d3d3d3;
   --gradient-color-top: #e7e7e7;
   --gradient-color-bottom: #1a1a1a;
+  --label-outline-color: #fff;
 
   /* Переменные, отвечающие за построение фонового градиента: */
   --gradient-vertical: repeating-linear-gradient(

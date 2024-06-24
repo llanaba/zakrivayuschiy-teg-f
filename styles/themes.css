@@ -18,6 +18,7 @@
     var(--gradient-color-top),
     var(--gradient-color-bottom)
   );
+  --label-outline-color: #000;
 }
 
 :root.theme-light {
@@ -33,6 +34,7 @@
     var(--gradient-color-top) 0.01%,
     var(--gradient-color-bottom)
   );
+  --label-outline-color: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,5 +51,6 @@
       var(--gradient-color-top),
       var(--gradient-color-bottom)
     );
+    --label-outline-color: #fff;
   }
 }
