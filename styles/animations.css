@@ -13,12 +13,109 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
-/* Анимация стрелки в меню переключения тем (в хедере) */
+/* АНИМАЦИЯ СТРЕЛКИ В ХЕДЕРЕ */
 @keyframes pulse {
   from {
     transform: translate(0);
   }
   to {
     transform: translate(4px);
+  }
+}
+
+/* АНИМАЦИЯ ИКОНКИ-СЕРДЕЧКА LIKE */
+
+/* исходный вид иконки-сердечка */
+.like-icon .heart {
+  transform-origin: center;
+}
+
+.like-icon .heart__core {
+  fill: var(--heart-invisible-color);
+  transition: fill 0.3s linear;
+  transition-delay: 0.03s;
+}
+
+.like-icon .heart__main-body {
+  fill: var(--heart-invisible-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon .heart__contour {
+  fill: var(--heart-main-color);
+  transition: fill 0.1s linear;
+}
+
+/* закрашивание внутренней части сердечка при ховере */
+.like-icon:hover .heart__core {
+  transition: fill 0.3s linear;
+  fill: var(--heart-main-color);
+}
+
+.like-icon:hover .heart__main-body {
+  transition: fill 0.3s linear;
+  transition-delay: 0.05s;
+  fill: var(--heart-main-color);
+}
+
+/* перекрашивание сердечка в красный при зажатии */
+.like-icon:active .heart__core {
+  transition: fill 0.3s linear;
+  fill: var(--heart-accent-color);
+}
+
+.like-icon:active .heart__main-body {
+  transition: fill 0.3s linear;
+  transition-delay: 0.05s;
+  fill: var(--heart-accent-color);
+}
+
+/* перекрашивание и анимация сердечка при клике */
+.like-icon.is-liked .heart__core {
+  transition: fill 0.3s linear;
+  fill: var(--heart-accent-color);
+}
+
+.like-icon.is-liked .heart__main-body {
+  transition: fill 0.3s linear;
+  transition-delay: 0.05s;
+  fill: var(--heart-accent-color);
+}
+
+.like-icon.is-liked .heart__contour {
+  fill: var(--heart-accent-color);
+  transition: fill 0.3s linear;
+  transition-delay: 0.06s;
+}
+
+.like-icon.is-liked .heart {
+  animation: change-size 0.3s ease-in 0.1s alternate;
+}
+
+/* масштабирование сердечка при клике */
+@keyframes change-size {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+/* анимация искр вокруг сердечка */
+.sparks {
+  opacity: 0;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks 0.3s 0.3s ease-in 1 alternate;
+}
+
+@keyframes sparks {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
