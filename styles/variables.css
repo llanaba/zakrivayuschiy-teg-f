@@ -7,6 +7,7 @@
   --gradient-color-top: #e7e7e7;
   --gradient-color-bottom: #1a1a1a;
   --label-outline-color: #fff;
+  --button-text-color: #fff;
 
   /* Переменные, отвечающие за построение фонового градиента: */
   --gradient-vertical: repeating-linear-gradient(
@@ -46,6 +47,7 @@
     calc(var(--container-inline-size) * 0.2),
     136px
   );
+  --like-button-height: 38px;
 }
 
 /* @media (width <= 375px) {

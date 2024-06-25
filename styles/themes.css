@@ -19,6 +19,7 @@
     var(--gradient-color-bottom)
   );
   --label-outline-color: #000;
+  --button-text-color: #00cc14;
 }
 
 :root.theme-light {
@@ -35,6 +36,7 @@
     var(--gradient-color-bottom)
   );
   --label-outline-color: #fff;
+  --button-text-color: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -52,5 +54,6 @@
       var(--gradient-color-bottom)
     );
     --label-outline-color: #fff;
+    --button-text-color: #00cc14;
   }
 }

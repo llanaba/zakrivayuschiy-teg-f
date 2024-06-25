@@ -210,9 +210,20 @@
   border: none;
 }
 
+.card__icon-button {
+  border: 2px solid transparent;
+  block-size: var(--like-button-height);
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--main-color);
+  transition: border 0.3s;
+  animation-timing-function: ease;
+}
+
 .card__like-button {
-  width: 130px;
-  height: 38px;
+  min-width: 130px;
+  block-size: var(--like-button-height);
   border: 2px solid var(--main-color);
   font-family: var(--font-family-accent), monospace;
   font-size: 14px;
@@ -236,7 +247,11 @@
 }
 
 .button__text {
+  position: relative;
   white-space: nowrap;
+  z-index: 1;
+  mix-blend-mode: difference;
+  color: var(--button-text-color);
 }
 
 @media (width <= 700px) {
@@ -251,4 +266,34 @@
     inline-size: 28px;
     block-size: 28px;
   }
+}
+
+.card__like-button:focus,
+.button_save:focus {
+  box-shadow: 2px 2px 0 var(--main-color);
+  transition: box-shadow 0.3s;
+  animation-timing-function: ease-in-out;
+}
+
+.button_hover-color-change {
+  position: relative;
+}
+
+.button_hover-color-change::after {
+  content: "";
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: var(--main-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+.button_hover-color-change:hover::after {
+  transform: scaleX(1);
 }
