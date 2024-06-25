@@ -8,6 +8,8 @@
   --gradient-color-bottom: #1a1a1a;
   --label-outline-color: #fff;
   --button-text-color: #fff;
+  --heart-contour-color: var(--main-color);
+  --heart-fill-color: #ff0000;
 
   /* Переменные, отвечающие за построение фонового градиента: */
   --gradient-vertical: repeating-linear-gradient(
