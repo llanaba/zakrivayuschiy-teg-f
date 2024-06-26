@@ -50,6 +50,7 @@
         </ul>
       </nav>
     </header>
+
     <main class="content page__section">
       <ul class="cards">
         <li class="card">
@@ -69,7 +70,7 @@
             <p>Место для ваших воспоминаний о начале обучения.</p>
           </div>
           <div class="card__bottom-panel">
-            <button class="button card__icon-button">
+            <button class="card__icon-button">
               <!-- <img class="like-icon" src="./svg/heart-in-paths.svg" /> -->
               <svg
                 class="like-icon"
@@ -293,15 +294,43 @@
         </li> -->
       </ul>
     </main>
+
     <footer class="footer page__section">
-      <button class="button button_save button_hover-color-change">
-        <div class="button-save__icon-container">
-          <svg class="button-save__icon button__text" viewBox="0 0 39 39">
+      <button
+        class="button button_save button_hover-color-change"
+        type="button"
+        onclick="window.popup.showModal()"
+        aria-controls="popup"
+      >
+        <div class="floppy-icon-container">
+          <svg class="floppy-icon button__text" viewBox="0 0 39 39">
             <use href="./svg/floppy.svg#floppy"></use>
           </svg>
         </div>
-        <span class="button__text">Сохранить на память</span>
+        <span class="button__text">Сохранить&nbsp;на&nbsp;память</span>
       </button>
+
+      <dialog class="popup" id="popup">
+        <div class="popup__content">
+          <div class="popup__instruction">
+            <div class="floppy-icon-container">
+              <svg class="floppy-icon button__text" viewBox="0 0 39 39">
+                <use href="./svg/floppy.svg#floppy"></use>
+              </svg>
+            </div>
+            <span class="button__text">Вставьте дискету, чтобы продолжить</span>
+          </div>
+          <form method="dialog">
+            <button
+              class="button button_popup button_hover-color-change"
+              type="button"
+              onclick="window.popup.close()"
+            >
+              <span class="button__text">OK</span>
+            </button>
+          </form>
+        </div>
+      </dialog>
     </footer>
     <script src="./scripts/like.js"></script>
   </body>

@@ -51,9 +51,13 @@
     136px
   );
   --like-button-height: 38px;
+  --popup-inline-size: clamp(341px, 25%, 357px);
+  --popup-padding: 30px;
 }
 
-/* @media (width <= 375px) {
+@media (width <= 375px) {
   :root {
+    --popup-inline-size: 91%;
+    --popup-padding: 30px 42px;
   }
-} */
+}
