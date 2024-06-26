@@ -245,7 +245,6 @@
 .button_popup {
   display: flex;
   align-items: center;
-  inline-size: 48%;
   gap: 5px;
   font-size: 14px;
 }
