@@ -153,7 +153,6 @@
   inset-inline-end: 25px;
   font-family: var(--font-family-accent), monospace;
   font-size: 14px;
-  text-transform: uppercase;
   color: var(--main-color);
   opacity: 0.5;
   mix-blend-mode: hard-light;
@@ -193,13 +192,12 @@
   justify-content: flex-end;
   align-items: center;
   padding: 24px 25px 26px;
-  gap: 12px;
+  gap: 5px;
 }
 
 .footer {
   margin-block-start: 50px;
   margin-block-end: 100px;
-  margin-block-end: 500px;
   display: flex;
   justify-content: center;
 }
