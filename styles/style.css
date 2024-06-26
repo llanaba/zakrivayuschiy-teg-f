@@ -355,3 +355,35 @@
   gap: 20px;
   align-items: center;
 }
+
+.filter-brightness {
+  filter: brightness(120%);
+}
+
+.filter-inverted {
+  filter: invert(100%);
+}
+
+.filter-hue-rotate {
+  filter: hue-rotate(180deg);
+}
+
+.filter-saturated {
+  filter: saturate(250%);
+}
+
+.filter-sepia {
+  filter: sepia(100%);
+}
+
+.filter-grey {
+  filter: grayscale(80%);
+}
+
+.filter-sharpen {
+  filter: contrast(140%) grayscale(55%);
+}
+
+.filter-soften {
+  filter: sepia(30%) blur(1px) brightness(190%);
+}
