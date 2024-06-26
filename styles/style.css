@@ -195,7 +195,7 @@
   gap: 5px;
 }
 
-.footer {
+.content__bottom {
   margin-block-start: 50px;
   margin-block-end: 100px;
   display: flex;
@@ -277,7 +277,7 @@
   z-index: 1;
   mix-blend-mode: difference;
   color: var(--button-text-color);
-  font-family: var(--font-family-accent);
+  font-family: var(--font-family-accent), monospace;
 }
 
 .popup .button__text {
